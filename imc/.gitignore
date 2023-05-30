@@ -4,10 +4,6 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-### Sensitive Data ###
-src/main/resources/application.properties
-
-
 ### STS ###
 .apt_generated
 .classpath
@@ -35,6 +31,3 @@ build/
 
 ### VS Code ###
 .vscode/
-
-##env Vars
-application.properties

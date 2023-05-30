@@ -18,6 +18,7 @@ public class Imc {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID_IMC")
     private Integer id;
+
     @Column(name = "EMPLOYEECODE_IMC")
     private Integer employeeCode;
 

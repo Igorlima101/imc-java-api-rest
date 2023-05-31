@@ -1,11 +1,14 @@
 package com.api.imc.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+
 import java.util.Date;
 
 @Getter
@@ -43,15 +46,21 @@ public class Imc {
     @Column(name = "RESULTDESC_IMC")
     private String resultDescriptionImc;
 
+
+    // JSonFormat is necessary for ajust format of dateTime, is just copy your format on postman... example: "30/05/2023 00:00:00" with space after number 3
+    @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss")
     @Column(name = "RESULTDATE_IMC")
     private LocalDateTime resultDateImc = LocalDateTime.now();
 
     @Column(name = "IDOPERATOR_IMC")
     private Integer idOperator;
 
+    @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss")
     @Column(name = "ALTERATIONDATE_IMC")
     private Date alterationDate;
 
+
+    @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss")
     @Column(name = "DELETIONDATE_IMC")
     private Date deletionDate;
 
